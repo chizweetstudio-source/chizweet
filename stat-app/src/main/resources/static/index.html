@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sederhana Statistik</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Sederhana Statistik</h1>
+            <p>Masukkan deretan angka (pisahkan dengan koma) untuk mendapatkan hasil perhitungannya.</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="dataInput" placeholder="Contoh: 10, 20, 30, 40, 50, 50"></textarea>
+                <button id="calcBtn" onclick="calculateStats()">Hitung Statistik</button>
+            </div>
+
+            <div id="result-section" class="result-section hidden">
+                <h2>Hasil Perhitungan</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Mean (Rata-rata)</h3>
+                        <p id="res-mean">-</p>
+                    </div>
+                    <div class="card">
+                        <h3>Median</h3>
+                        <p id="res-median">-</p>
+                    </div>
+                    <div class="card">
+                        <h3>Modus</h3>
+                        <p id="res-mode">-</p>
+                    </div>
+                    <div class="card">
+                        <h3>Simpangan Baku</h3>
+                        <p id="res-std">-</p>
+                    </div>
+                    <div class="card">
+                        <h3>Minimum</h3>
+                        <p id="res-min">-</p>
+                    </div>
+                    <div class="card">
+                        <h3>Maksimum</h3>
+                        <p id="res-max">-</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

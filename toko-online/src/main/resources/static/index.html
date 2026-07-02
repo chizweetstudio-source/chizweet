@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chizweet Store — Toko Fashion Lokal Premium</title>
+    <meta name="description" content="Temukan koleksi fashion lokal premium di Chizweet Store. Pakaian, sepatu, dan aksesori berkualitas dengan harga terjangkau.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Chizweet<span class="logo-accent">Store</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#products" class="nav-link">Produk</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="btn-cart" onclick="scrollToSection('contact')">
+                🛒 Pesan Sekarang
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg-glow glow-1"></div>
+        <div class="hero-bg-glow glow-2"></div>
+        <div class="hero-bg-glow glow-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ Koleksi Terbaru 2026</div>
+            <h1 class="hero-title">
+                Fashion Lokal<br>
+                <span class="gradient-text">Berkualitas Premium</span>
+            </h1>
+            <p class="hero-subtitle">Temukan koleksi pakaian, sepatu, dan aksesori terbaik buatan lokal dengan kualitas yang bicara sendiri.</p>
+            <div class="hero-actions">
+                <button class="btn-primary" onclick="scrollToSection('products')">
+                    Lihat Koleksi
+                    <span class="btn-arrow">→</span>
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('contact')">
+                    Hubungi Kami
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Produk Terjual</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Pelanggan Puas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Lokal & Original</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card-float card-float-1">
+                <span class="float-emoji">👕</span>
+                <div>
+                    <p class="float-name">Kaos Premium</p>
+                    <p class="float-price">Rp 85.000</p>
+                </div>
+            </div>
+            <div class="hero-card-float card-float-2">
+                <span class="float-emoji">👟</span>
+                <div>
+                    <p class="float-name">Sneakers Keren</p>
+                    <p class="float-price">Rp 350.000</p>
+                </div>
+            </div>
+            <div class="hero-card-float card-float-3">
+                <span class="float-emoji">⌚</span>
+                <div>
+                    <p class="float-name">Jam Casual</p>
+                    <p class="float-price">Rp 285.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <div class="section-badge">🛍️ Katalog Kami</div>
+            <h2 class="section-title">Koleksi Pilihan</h2>
+            <p class="section-subtitle">Semua produk kami dipilih dengan teliti untuk memastikan kualitas terbaik.</p>
+        </div>
+
+        <!-- FILTER TABS -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterProducts('semua', this)">Semua</button>
+            <button class="filter-tab" onclick="filterProducts('Pakaian', this)">Pakaian</button>
+            <button class="filter-tab" onclick="filterProducts('Sepatu', this)">Sepatu</button>
+            <button class="filter-tab" onclick="filterProducts('Aksesori', this)">Aksesori</button>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid" id="productGrid">
+            <div class="product-loader">
+                <div class="spinner"></div>
+                <p>Memuat produk...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="contact-glow"></div>
+        <div class="section-header">
+            <div class="section-badge">📩 Hubungi Kami</div>
+            <h2 class="section-title">Pesan Sekarang</h2>
+            <p class="section-subtitle">Tertarik dengan produk kami? Hubungi kami dan kami akan merespons secepat mungkin!</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <h4>Lokasi Kami</h4>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📱</span>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">✉️</span>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@chizweet.store</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">⏰</span>
+                    <div>
+                        <h4>Jam Operasional</h4>
+                        <p>Senin - Sabtu, 09:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" onsubmit="sendContact(event)">
+                <div class="form-group">
+                    <label for="contactName">Nama Lengkap</label>
+                    <input type="text" id="contactName" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email / No. WhatsApp</label>
+                    <input type="text" id="contactEmail" placeholder="email@contoh.com atau 08xx-xxxx-xxxx" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactProduct">Produk yang Diminati</label>
+                    <select id="contactProduct">
+                        <option value="">Pilih produk (opsional)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Pesan / Pertanyaan</label>
+                    <textarea id="contactMessage" placeholder="Tulis pesan, pertanyaan, atau custom request Anda di sini..." rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <span id="submitText">Kirim Pesan 🚀</span>
+                </button>
+                <div id="formSuccess" class="form-success hidden">
+                    ✅ Pesan Anda sudah terkirim! Kami akan segera menghubungi Anda.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">✦</span>
+                <span class="logo-text">Chizweet<span class="logo-accent">Store</span></span>
+            </div>
+            <p class="footer-tagline">Fashion lokal, kualitas global.</p>
+            <p class="footer-copy">© 2026 ChizweetStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DETAIL PRODUK -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-emoji" id="modalEmoji"></div>
+            <div class="modal-category" id="modalCategory"></div>
+            <h2 class="modal-name" id="modalName"></h2>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-price" id="modalPrice"></div>
+            <button class="btn-primary modal-order-btn" onclick="orderProduct()">
+                Pesan Produk Ini 🛒
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
